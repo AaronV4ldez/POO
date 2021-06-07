@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackpane" maxWidth="600.0" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Sintomas.sintomas">
+    <children>
+        <AnchorPane fx:id="anchorpane" maxHeight="600.0" maxWidth="600.0" minHeight="600.0" minWidth="600.0" prefHeight="600.0" prefWidth="600.0" styleClass="bodybg" stylesheets="@../Estilos/estilos.css">
+            <children>
+                <Label layoutX="33.0" layoutY="14.0" prefHeight="49.0" prefWidth="178.0" text="Síntomas">
+                    <font>
+                        <Font name="Corbel Bold" size="39.0" />
+                    </font>
+                </Label>
+                <Label layoutX="33.0" layoutY="55.0" prefHeight="91.0" prefWidth="522.0" text="A continuación se muestran algunos de los sińtomas del Covid-19 por favor marque los síntomas de los que padece y se mostrará que es lo que deberia de hacer" textAlignment="JUSTIFY" wrapText="true">
+                    <font>
+                        <Font name="Corbel" size="18.0" />
+                    </font>
+                </Label>
+                <CheckBox fx:id="chbox2" layoutX="204.0" layoutY="146.0" mnemonicParsing="false" />
+                <CheckBox fx:id="chbox5" layoutX="33.0" layoutY="290.0" mnemonicParsing="false" />
+                <CheckBox fx:id="chbox3" layoutX="348.0" layoutY="146.0" mnemonicParsing="false" />
+                <CheckBox fx:id="chbox4" layoutX="472.0" layoutY="146.0" mnemonicParsing="false" />
+                <CheckBox fx:id="chbox6" layoutX="204.0" layoutY="290.0" mnemonicParsing="false" />
+                <CheckBox fx:id="chbox7" layoutX="348.0" layoutY="290.0" mnemonicParsing="false" />
+                <CheckBox fx:id="chbox8" layoutX="472.0" layoutY="290.0" mnemonicParsing="false" />
+                <CheckBox fx:id="chbox1" layoutX="33.0" layoutY="146.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="24.0" stylesheets="@../../../Centro%20de%20atencion/src/sample/estilos.css" />
+                <Label layoutX="57.0" layoutY="146.0" prefHeight="91.0" prefWidth="90.0" styleClass="dificultadres" stylesheets="@../../../Centro%20de%20atencion/src/sample/estilos.css" />
+                <Label layoutX="232.0" layoutY="154.0" prefHeight="100.0" prefWidth="90.0" styleClass="dolorcabez" stylesheets="@../../../Centro%20de%20atencion/src/sample/estilos.css" />
+                <Label layoutX="377.0" layoutY="152.0" prefHeight="91.0" prefWidth="90.0" styleClass="doloresxd" stylesheets="@../../../Centro%20de%20atencion/src/sample/estilos.css" />
+                <Label layoutX="488.0" layoutY="154.0" prefHeight="100.0" prefWidth="90.0" styleClass="dolorgarga" stylesheets="@../../../Centro%20de%20atencion/src/sample/estilos.css" />
+                <Label layoutX="61.0" layoutY="299.0" prefHeight="100.0" prefWidth="90.0" styleClass="escurrimientos" stylesheets="@../../../Centro%20de%20atencion/src/sample/estilos.css" />
+                <Label layoutX="232.0" layoutY="299.0" prefHeight="100.0" prefWidth="90.0" styleClass="fiebrea" stylesheets="@../../../Centro%20de%20atencion/src/sample/estilos.css" />
+                <Label layoutX="377.0" layoutY="299.0" prefHeight="100.0" prefWidth="90.0" styleClass="ojosR" stylesheets="@../../../Centro%20de%20atencion/src/sample/estilos.css" />
+                <Label layoutX="488.0" layoutY="299.0" prefHeight="100.0" prefWidth="90.0" styleClass="tosini" stylesheets="@../../../Centro%20de%20atencion/src/sample/estilos.css" />
+                <Button layoutX="271.0" layoutY="447.0" mnemonicParsing="false" onAction="#suma" stylesheets="@../Estilos/estilos.css" text="Calcular">
+               <styleClass>
+                  <String fx:value="degradado_botones_simulacion" />
+                  <String fx:value="Redondo" />
+               </styleClass></Button>
+                <Label fx:id="llblxd" layoutX="55.0" layoutY="507.0" prefHeight="73.0" prefWidth="690.0" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="507.0">
+                    <font>
+                        <Font name="Corbel" size="20.0" />
+                    </font>
+                </Label>
+            <Button layoutX="494.0" layoutY="445.0" mnemonicParsing="false" onAction="#irsiguiente" text="Siguiente">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="degradado_botones_simulacion" />
+                  <String fx:value="Redondo" />
+               </styleClass>
+            </Button>
+            <Button layoutX="15.0" layoutY="445.0" mnemonicParsing="false" onAction="#btinicio" text="Atras">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="degradado_botones_simulacion" />
+                  <String fx:value="Redondo" />
+               </styleClass>
+            </Button>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

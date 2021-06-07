@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackpane" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Centro_de_Atencion.centro_de_atencion">
+    <children>
+        <AnchorPane fx:id="anchorpane" layoutX="10.0" layoutY="10.0" minWidth="600.0" prefHeight="600.0" prefWidth="600.0" styleClass="bodybg" stylesheets="@../Estilos/estilos.css">
+            <children>
+                <Label layoutX="40.0" layoutY="99.0" prefHeight="366.0" prefWidth="530.0" styleClass="imgmapa" stylesheets="@../Estilos/estilos.css" />
+                <Label layoutX="77.0" layoutY="42.0" text="Dónde puedes ir a atenderte">
+                    <font>
+                        <Font name="Corbel Italic" size="28.0" />
+                    </font>
+                </Label>
+                <Label layoutX="41.0" layoutY="491.0" text="Dirección: Avenida Benito Juárez ,Col. Nuevo Casas Grandes 1901, Centro, 31700">
+                    <font>
+                        <Font name="Corbel" size="16.0" />
+                    </font>
+                </Label>
+                <Label layoutX="41.0" layoutY="525.0" text="Teléfono: 636 694 6440">
+                    <font>
+                        <Font name="Corbel" size="16.0" />
+                    </font>
+                </Label>
+                <Label layoutX="508.0" layoutY="202.0" prefHeight="61.0" prefWidth="60.0" styleClass="flechini" stylesheets="@estilos.css" />
+                <Label layoutX="284.0" layoutY="515.0" prefHeight="82.0" prefWidth="68.0" styleClass="liki" stylesheets="@estilos.css" />
+            <Label layoutX="41.0" layoutY="506.0" text=" Nuevo Casas Grandes, Chih.">
+               <font>
+                  <Font name="Corbel" size="16.0" />
+               </font>
+            </Label>
+            <Button layoutX="499.0" layoutY="556.0" mnemonicParsing="false" onAction="#irsiguiente" text="Siguiente">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="degradado_botones_simulacion" />
+                  <String fx:value="Redondo" />
+               </styleClass>
+            </Button>
+            <Button layoutX="40.0" layoutY="556.0" mnemonicParsing="false" onAction="#btinicio" text="Atras">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="degradado_botones_simulacion" />
+                  <String fx:value="Redondo" />
+               </styleClass>
+            </Button>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

@@ -1,0 +1,99 @@
+.Fondo_Listen{
+   -fx-background-color: linear-gradient(from 70% 50% to 100% 100%, #CEFDED
+, #96ABBE);
+}
+.degradado_botones{
+   -fx-background-color: linear-gradient(from 1% 99% to 100% 100%,#96ABBE,#CEFDED);
+}
+.degradado_botones_simulacion{
+   -fx-background-color: linear-gradient(from 1% 80% to 100% 100%,#9BA5B9,#F2EAD6);
+}
+.Fondo_simulacion{
+   -fx-background-color: linear-gradient(from 50% 50% to 100% 100%,#F2EAD6,#625B8A);
+}
+.ImageCovid{
+  -fx-background-image: url("../Img/Covid.jpg");
+  -fx-background-size: contain;
+  -fx-background-size: 100% 100%;
+ }
+.ImageChihuahua{
+   -fx-background-image: url("../Img/chihuahua.jpg");
+   -fx-background-size: contain;
+   -fx-background-size: 100% 100%;
+}
+.Redondo{
+  -fx-background-radius: 18 18 18 18;
+  -fx-border-radius: 0 0 18 18;
+}
+.button:hover {
+    -fx-font-size: 12.2px;
+}
+
+.bodybg{
+-fx-background-image:url("../img/fondo.jpg")
+}
+
+.imgmapa{
+-fx-background-image:url("../img/mapancg.jpg")
+}
+
+.flechini{
+-fx-background-image:url("../img/flechas.gif")
+}
+
+.liki{
+-fx-background-image:url("../img/like.gif")
+}
+
+.bodybg{
+-fx-background-image:url("../img/fondo.jpg")
+}
+
+.gifprueba{
+-fx-background-image:url("../img/orang_batuk.gif")
+}
+
+.estrellaowo{
+-fx-background-image:url("../img/Estrellota.gif")
+}
+
+.tos2{
+-fx-background-image:url("../img/tos.gif")
+}
+
+.bodybg{
+-fx-background-image:url("../img/fondo.jpg")
+}
+
+.dificultadres{
+-fx-background-image:url("../img/dificultadr.png")
+}
+
+.dolorcabez{
+-fx-background-image:url("../img/dolorC.png")
+}
+
+.dolorgarga{
+-fx-background-image:url("../img/dolorg.png")
+}
+
+.doloresxd{
+-fx-background-image:url("../img/dolorxd.png")
+}
+
+.escurrimientos{
+-fx-background-image:url("../img/escurrimiento.png")
+}
+
+.fiebrea{
+ -fx-background-image:url("../img/fiebre.png")
+ }
+
+ .ojosR{
+ -fx-background-image:url("../img/ojos.png")
+ }
+
+ .tosini{
+ -fx-background-image:url("../img/tos.png")
+ }
+
