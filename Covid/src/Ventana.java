@@ -6,7 +6,9 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
 public class Ventana {
-    public AnchorPane pane;
+    private AnchorPane pane;
+    private Vacuna arreglovacuna[]=new Vacuna[2];
+    private int con=0;
 
     public AnchorPane construir(){
         this.pane=new AnchorPane();
@@ -67,20 +69,50 @@ btnInsert.setOnAction(new EventHandler<ActionEvent>() {
             alert.setContentText("L L E N A   T O D O   P A P I");
             alert.show();
         }else {
-            int conver=Integer.parseInt(dv);
-        Vacuna vacuna=new  Vacuna(nv, mv, conver);
-            Alert alert=new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("LISTO");
-            alert.setContentText("V A C U N A   C R E A D A   C O R R E C T A M E N T E");
-            alert.show();
-            txtNo.setText("");
-            txtNo1.setText("");
-            txtNo2.setText("");
+            try{
+
+                int conver=Integer.parseInt(dv);
+                Vacuna vacuna=new  Vacuna(nv, mv, conver);
+                arreglovacuna[con]=vacuna;
+                con ++;
+                launchSucess("Vacuna Creada con éxito");
+                txtNo.setText("");
+                txtNo1.setText("");
+                txtNo2.setText("");
+                listavacuna.getItems().addAll(vacuna.getNomvacuna(), vacuna.getMarcavacuna(), vacuna.getNdosis());
+
+            } catch (NumberFormatException error){
+                launchError("El nnumero insertado no es valido");
+
+
+            }catch (ArrayIndexOutOfBoundsException error) {
+
+                launchError("No se pueden agregar mas registros");
+
+
+            }catch (Exception e){
+                launchError("Ocurrio un error inesperado");
+
+            }
+
 
         }
     }
 });
 
         return pane;
+    }
+    public void launchError(String  mensaje){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("E R R O R");
+        alert.setContentText(mensaje);
+        alert.show();
+
+    }
+    public void launchSucess(String monsaje){
+        Alert alert=new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("LISTO");
+        alert.setContentText(monsaje);
+        alert.show();
     }
 }
