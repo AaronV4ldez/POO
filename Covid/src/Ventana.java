@@ -49,12 +49,57 @@ public class Ventana {
         btnInsert.setLayoutY(70);
 
         ListView listavacuna=new ListView();
-        listavacuna.setPrefSize(550, 250);
+        listavacuna.setPrefSize(320, 250);
         listavacuna.setLayoutX(10);
         listavacuna.setLayoutY(120);
 
+        Label tnomen=new Label("Nombre del men uwu");
+        tnomen.setTextFill(Color.PINK);
+        tnomen.setLayoutX(350);
+        tnomen.setLayoutY(120);
 
-this.pane.getChildren().addAll(t1,lbl,txtNo, lbl1, txtNo1, lbl2, txtNo2, btnInsert, listavacuna);
+        TextField txtNome=new TextField();
+        txtNome.setPrefSize(120, 25);
+        txtNome.setLayoutX(350);
+        txtNome.setLayoutY(150);
+
+        Label tcurup=new Label("Curp del men uwu");
+        tcurup.setTextFill(Color.RED);
+        tcurup.setLayoutX(350);
+        tcurup.setLayoutY(190);
+
+        TextField txtcurp=new TextField();
+        txtcurp.setPrefSize(150, 25);
+        txtcurp.setLayoutX(350);
+        txtcurp.setLayoutY(210);
+
+        Label llblcombo=new Label("Como te identificas¿");
+        llblcombo.setTextFill(Color.DARKBLUE);
+        llblcombo.setLayoutX(350);
+        llblcombo.setLayoutY(245);
+
+        ComboBox comboBox =new ComboBox();
+        comboBox.getItems().addAll("Hombre", "Mujer", "Mujer trans", "Furro", "otro");
+        comboBox.setPrefSize(220, 25);
+        comboBox.setLayoutX(350);
+        comboBox.setLayoutY(265);
+
+        Button btnInserta=new Button("Insertar");
+        btnInserta.setPrefSize(80, 25);
+        btnInserta.setLayoutX(350);
+        btnInserta.setLayoutY(320);
+
+        ListView listapacientes=new ListView();
+        listapacientes.setPrefSize(480, 100);
+        listapacientes.setLayoutX(10);
+        listapacientes.setLayoutY(380);
+
+        Button btnMostrar=new Button("Mostrar");
+        btnMostrar.setPrefSize(80, 25);
+        btnMostrar.setLayoutX(520);
+        btnMostrar.setLayoutY(380);
+
+this.pane.getChildren().addAll(t1,lbl,txtNo, lbl1, txtNo1, lbl2, txtNo2, btnInsert, listavacuna, txtNome, txtcurp, tnomen, tcurup, llblcombo, comboBox, btnInserta, listapacientes, btnMostrar);
 
 btnInsert.setOnAction(new EventHandler<ActionEvent>() {
     @Override
@@ -79,7 +124,7 @@ btnInsert.setOnAction(new EventHandler<ActionEvent>() {
                 txtNo.setText("");
                 txtNo1.setText("");
                 txtNo2.setText("");
-                listavacuna.getItems().addAll(vacuna.getNomvacuna(), vacuna.getMarcavacuna(), vacuna.getNdosis());
+                listavacuna.getItems().addAll(vacuna.getNomvacuna());
 
             } catch (NumberFormatException error){
                 launchError("El nnumero insertado no es valido");
@@ -99,6 +144,28 @@ btnInsert.setOnAction(new EventHandler<ActionEvent>() {
         }
     }
 });
+btnInserta.setOnAction(new EventHandler<ActionEvent>() {
+    @Override
+    public void handle(ActionEvent event) {
+        String sexo=comboBox.getSelectionModel().getSelectedItem().toString();
+       int pos=listavacuna.getSelectionModel().getSelectedIndex();
+       listapacientes.getItems().addAll(arreglovacuna[pos].getNomvacuna()+" " + arreglovacuna[pos].getNdosis() + "  " + sexo);
+        //System.out.println(sexo+"   " +arreglovacuna[pos].getNdosis());
+    }
+});
+ btnMostrar.setOnAction(new EventHandler<ActionEvent>() {
+     @Override
+     public void handle(ActionEvent event) {
+         String sexo=comboBox.getSelectionModel().getSelectedItem().toString();
+         String nombremen=txtNome.getText();
+         String curpmen=txtcurp.getText();
+         Alert alert=new Alert(Alert.AlertType.INFORMATION);
+         alert.setTitle("LISTO");
+         alert.setContentText("El paciente: " + nombremen +" el cual tiene de curp: " +curpmen +" y esta persona se identifica como: " + sexo );
+         alert.show();
+
+     }
+ });
 
         return pane;
     }

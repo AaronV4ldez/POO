@@ -10,12 +10,12 @@ public class Principal extends Application {
     public void start(Stage stage) throws Exception {
        Ventana ventana=new Ventana();
         AnchorPane pane=ventana.construir();
-        pane.setPrefWidth(600);
-        pane.setPrefHeight(500);
+        pane.setPrefWidth(650);
+        pane.setPrefHeight(550);
         Scene escena= new Scene(pane);
         stage.setScene(escena);
-        stage.setWidth(600);
-        stage.setHeight(500);
+        stage.setWidth(650);
+        stage.setHeight(550);
         stage.setTitle("Cobijas");
         stage.show();
     }
